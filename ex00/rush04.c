@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   rush04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eouvrard <eouvrard@student.42lausanne.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 17:27:24 by eouvrard          #+#    #+#             */
-/*   Updated: 2021/09/10 13:21:10 by eouvrard         ###   ########.fr       */
+/*   Updated: 2021/09/13 14:32:06 by eouvrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	ft_putchar(char c);
 
-int	head(int x, int y)
+void	head(int x, int y)
 {
 	int	nbx;
 	int	nby;
@@ -33,10 +33,9 @@ int	head(int x, int y)
 		}
 		ft_putchar('\n');
 	}
-	return (0);
 }
 
-int	body(int x, int y)
+void	body(int x, int y)
 {
 	int	nbx;
 	int	nby;
@@ -60,10 +59,9 @@ int	body(int x, int y)
 			nby++;
 		}
 	}
-	return (0);
 }
 
-int	feet(int x, int y)
+void	feet(int x, int y)
 {
 	int	nby;
 	int	nbx;
@@ -74,7 +72,7 @@ int	feet(int x, int y)
 	{
 		if (y - 1)
 		{
-			ft_putchar('A');
+			ft_putchar('C');
 			while (nbx <= x - 2 )
 			{
 				ft_putchar('B');
@@ -82,18 +80,16 @@ int	feet(int x, int y)
 			}
 			if (x - 1)
 			{
-				ft_putchar('C');
+				ft_putchar('A');
 			}
 			ft_putchar('\n');
 		}
 	}
-	return (0);
 }
 
-int	rush(int x, int y)
+void	rush(int x, int y)
 {
 	head(x, y);
 	body(x, y);
 	feet(x, y);
-	return (0);
 }
