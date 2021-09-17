@@ -6,7 +6,7 @@
 /*   By: eouvrard <eouvrard@student.42lausanne.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 16:26:41 by eouvrard          #+#    #+#             */
-/*   Updated: 2021/09/14 10:26:00 by eouvrard         ###   ########.fr       */
+/*   Updated: 2021/09/17 13:34:30 by eouvrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ void	rush(int x, int y);
 
 int	main(int argc, char **argv)
 {
+	int	x;
+	int	y;
+
+	x = 0;
+	y = 0;
 	if (argc == 3)
 	{
-		int	x;
-		int	y;
-
 		x = atoi(argv[1]);
 		y = atoi(argv[2]);
 		rush(x, y);
